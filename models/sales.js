@@ -22,7 +22,6 @@ const salesSchema = new Schema(
     date:{
         type:Date,
     }
-    //total
 });
 
 module.exports = mongoose.model("Sales", salesSchema);

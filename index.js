@@ -61,7 +61,6 @@ app.get("/", (req, res) => {
   res.render("login");
 });
 
-// authentications
 
 app.get("/login", (req, res) => {
   res.render("login");
@@ -113,14 +112,8 @@ app.post("/stat_ind",async(req,res)=>{
   
 })
 
-//common
-
 app.get('/profile',isLoggedIn,async(req,res)=>{
     res.render('profile')
-})
-
-app.get('/about',isLoggedIn,async(req,res)=>{
-    res.render('about')
 })
 
 app.get('/welcome',isLoggedIn,async(req,res)=>{
@@ -257,7 +250,7 @@ app.get('/print',isLoggedIn,(req,res)=>{
 })
 
 
-//inventory portion
+//inventory
 
 app.get('/inventory',isLoggedIn,async(req,res)=>{
     if(res.locals.currentUser.user_type=='Clerk'){
